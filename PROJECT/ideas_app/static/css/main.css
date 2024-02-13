@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+*{
+    font-family: 'Kanit';    
+    background-color: var(--fondo);
+    
+}
+:root{
+    --bg-color: #031f2b;
+    --ok-btn:#00337C;
+    --fondo:#03C988;
+}
+body{
+    margin: 60px;
+    margin-top: -5px;
+}
+span {
+    background-color: var(--bg-color);
+    vertical-align: top;
+    margin-left: 135px;
+    margin-top: 4rem;
+    padding: 3rem 3rem;
+    display: inline-block;
+    border-radius: 15px;
+    justify-content: flex-end;
+    text-align: end;
+
+}
+form{
+    background-color: var(--bg-color);
+    margin-left: 10px;
+    
+}
+input{ 
+    margin: 0px 20px;
+    border-radius: 6px;
+    width: 600px;
+    min-height: 10px;
+    background-color: white;
+    padding-top: 1rem;
+    font-size: 12px;
+}
+.button-29 {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, var(--fondo) 0, var(--bg-color) 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    height: 40px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    text-align: center;
+    align-content: center;
+    align-items:center;
+  
+  }
+  
+  .button-29:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+  
+  .button-29:hover {
+    transform: translateY(-2px);
+  }
+  
+  .button-29:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+.login-btn,.register-btn{
+    border-radius: 6px;
+    border-color: var(--ok-btn);
+    background-color: var(--ok-btn);
+    color: white;
+    padding: 10px 10px;
+}
+#warning{
+    background-color: brown;
+    color: aliceblue;
+}
+h2,label{
+    color: white;
+    background-color: var(--bg-color);
+}
+h2:hover{
+    color: palegreen;
+}
+.login-btn:hover,.register-btn:hover{
+    background-color: var(--ok-btn);
+    cursor: pointer;
+    box-shadow: 2px 2px;
+}
+
+.title{
+    text-align: center;
+    
+}
+nav{
+    text-align: center;
+}
+.have-account{
+    background-color: var(--bg-color);
+    color: white;
+    margin-right: 20px;
+}a{
+    background-color: var(--bg-color);
+    color: var(--fondo);
+    text-decoration: none;
+}
+a:hover{
+    color: aquamarine;
+    cursor: pointer;
+}

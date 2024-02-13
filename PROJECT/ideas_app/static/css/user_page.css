@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+*{
+    font-family: 'Kanit';
+    font-weight: 300;
+    margin: 0px;
+}
+:root{
+    --bg-color: #164B60;
+    --ok-btn:#00337C;
+    --fondo:#47aa89;
+}
+body{
+    background-color: var(--fondo);
+}
+nav{
+    padding-top: 15px;
+    display: inline-flex;
+    padding-bottom: 10px;
+    margin-left: 15px;   
+}
+.nav{
+    background-color: rgb(1, 19, 19);
+}
+.nav img{
+    margin-left: 50px ;
+}
+a{
+    margin-left: 80px;
+    text-decoration: none;
+    display:inline-flex;
+
+}
+input{
+    padding-top: 8px;
+    padding-bottom: 5px;  
+}
+.logout-btn{
+    background-color: rgb(3, 109, 91);
+    color: aliceblue;
+    border-radius:15px;
+    border-color: rgb(3,109,91);
+    padding: 18px   10px;
+    align-items: center;
+    margin-left: 900px;
+    
+}
+h4{
+    font-size: 50px;
+    color: black;
+    font-family: 'Kanit'; font-weight: 600;
+   /* text-shadow:2px 2px rgb(219, 219, 133);*/
+}
+
+.logout-btn:hover{
+    background-color:rgb(7, 100, 100);
+    cursor: pointer;
+    text-align: center;
+}
+
+body form, body h4{
+    margin-left: 50px;
+}
+div p{
+    /*background-color:darkseagreen;*/
+    width:491px;
+    height: auto;
+    color: white;
+    
+    margin-left: 0.9rem;
+    word-wrap: break-word;
+    border-width: 1px;
+}   
+
+.delete-post{
+    margin-left:480px;
+    align-items: baseline;
+    filter: invert(100%);
+}
+.delete-post img:hover{
+    align-items: baseline;
+    /*width: 28px;*/
+    background-color: white;
+    border-radius: 10px;
+}
+#success{
+    background-color: green;
+    color:white;
+}
+
+div a img:hover{
+    background-color: rgb(4, 60, 70);
+
+}
+
+.big-div{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    background-color: rgb(1, 19, 19);
+    margin-left: 49px;
+    width:max-content;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+.like:hover{
+    color:darkred;
+}
+.user_name{
+    text-shadow:2px 3px rgb(138, 240, 201);
+    color: black !important; 
+    text-decoration-color:slateblue;
+    font-family: 'Kanit'; font-weight: 600;
+}
+
+div p a{
+    color: rgb(1, 1, 29);
+    font-size: larger;
+
+}
+.total{
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left:500px ;
+    width: 400px;
+    text-align: start;
+    
+}.total p{ color: #164B60;}
+
+th{
+    display:flex;
+    flex-direction: row;
+    float: right;
+    color: white;
+    background-color: rgb(5, 5, 48);
+    width:260px;
+    height: 30px;
+    justify-content: center;
+    border-radius: 4px;
+    text-align: start;
+}
+thead{
+    background-color: rgb(5, 5, 48);
+    border-color: black;
+}
+tbody:hover ,td:hover, tbody:hover{
+    background-color:rgb(164, 222, 245);
+}
+td{
+    background-color: white;
+    border: solid black 0.2px;
+    text-align:start;
+    display:flex;
+    flex-direction: row;
+    float: right;
+    width: 220px;
+    word-break: break-all;
+   /* margin:0px;*/
+    padding-left: 50px;
+
+}
+h2 a{
+    padding-top:45px ;
+}
+table{
+    width: fit-content;
+    border-radius: 10px;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: start;
+    background-color: skyblue;
+    
+}
+.people-like,table{
+    margin-left: 26rem;
+}
+.txt-input{
+    border-radius: 5px;
+    border-width: 0.2px;
+    height: 30px;
+    overflow-wrap: break-word;
+}
+.idea-btn{
+    color: wheat;
+    border:none;
+    border-radius: 5px;
+    height: 40px;
+    width:55px;
+}
+.idea-btn:hover{
+    cursor: pointer;
+}
+.user-name, .user-name:visited, .like,.like:visited, .people-like-this{
+    color: var(--fondo);    
+}
+p a strong{
+    color: #6cdbb6;
+    font-size: larger;
+}
+
+::selection{
+    background-color: var(--bg-color);
+    color: white;
+}
+
+
+.button-29 {
+  align-items: center;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 100% 0, var(--fondo) 0, var(--bg-color) 100%);
+  border: 0;
+  border-radius: 6px;
+  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+  text-align: center;
+  align-content: center;
+  align-items:center;
+
+}
+
+.button-29:focus {
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+  transform: translateY(-2px);
+}
+
+.button-29:active {
+  box-shadow: #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+.heart{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    background-color: var(--bg-color);
+    margin-left: 7px;
+    height: 34px;
+    border-radius: 9px;
+}
+.heart img{
+    background-color: white;
+    border-radius: 15px;
+    height: 20px;width:20px;
+    align-self: center;
+}
+.user-alias-post{
+    margin: 0;
+}
+.detalles-usuario{
+    height: 400px;
+    background-color: rgb(190, 230, 117);
+    box-shadow: 15px 20px 80px 0px black;
+    border-color: black;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-left: 370px;
+    width: fit-content;
+
+}
+.datos-usuario{
+    display: flex;
+    width: fit-content;
+    margin-left: 150px;
+    flex-direction: column;
+    justify-content: space-around;
+    white-space:0;
+}.datos-usuario > p{
+    margin-bottom: -30px;
+    font-weight:900;
+    color: #03152e;
+
+    text-shadow: 2px 2px 20px var(--ok-btn);
+}.datos-usuario > p > a{
+    margin-left: 8px;
+    font-size: 22px;
+    text-shadow: none;
+}.datos-usuario > p :hover{
+    color:rgb(5, 68, 5);
+}
+
+td:hover{
+    background-color: rgb(164, 222, 245);
+    color: black;
+}
+h2{
+    margin-left: 325px;
+    font-size: xx-large;
+}
+.hrt-emoji{
+    color: palevioletred;
+    text-shadow: -3px 1px 0px black;
+    font-size: 30px;
+}

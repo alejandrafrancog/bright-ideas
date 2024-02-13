@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela%20Round&display=swap" rel="stylesheet">
+    <title>Bright Ideas - Login</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}     
+            {% if messages %}                            
+                {% for message in messages %}           
+                    <p id="warning">{{message}}</p>                 
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    <nav>
+        <img src="{{url_for('static',filename='img/logo.png')}}" width="220px">
+    </nav>
+    <span>
+        <form action="/register" method="post" name="register-form">
+            <h2 class="title">R E G I S T E R</h2>
+            <label for ="name">Name</label>
+            <input type = "text" name="name" required><br><br>
+
+            <label for ="alias">Alias</label>
+            <input type = "text" name="alias" required><br><br>
+
+            <label for ="email">Email</label>
+            <input type = "email" name="email" required><br><br>
+
+            <label for ="password">Password</label>
+            <input type = "password" name="password" required><br><br>
+
+            <label for ="confirm_password">Confirm password</label>
+            <input type = "password" name="confirm_password" required><br><br> 
+                <p class="have-account">Have an account? <a href="#login-user-acc">Sign in!</a>
+                </p>
+            <input type="submit" value="Register" class="register-btn button-29"><br><br>
+        </form>
+    </span>
+    <span id="login-user-acc">
+        <form action="/login" method="post" name="login-form">
+            <br><br><br>
+            <h2 class="title">L O G I N</h2><br>
+
+            <label for ="email">Email</label>
+            <input type = "email" name="email" required><br><br><br>
+
+            <label for ="password">Password</label>
+            <input type = "password" name="password" required><br><br><br>
+
+            <input type="submit" value="Login" class="login-btn button-29"><br><br>
+            
+        </form>
+    </span>
+ 
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{user.name}}'s page</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/user_page.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela%20Round&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}     
+            {% if messages %}                            
+                {% for message in messages %}           
+                    <p id="success">{{message}}</p>                 
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    <div class="nav">
+        <nav>
+            <a href="/bright_ideas">
+                <img src="{{url_for('static',filename='img/logo.png')}}" width="120px">
+            </a>
+             
+            <form action="/logout" method="post">
+                <input type="submit" class="button-29 logout-btn" value="LOGOUT">
+            </form>  
+        </nav>
+    </div><br>
+    
+    <h4>Hi, <b class="user_name">{{user.name}} </b>!</h4><br>
+    <div>
+        <form action="/add-idea" method="post">
+            <input type="text" placeholder="Post something witty here" size="55" name="content" class="txt-input"> 
+            <input type="submit" value="Idea!" class="idea-btn button-29">
+        </form>
+    </div><br>
+    <div class="contenido">
+        <div>
+    
+            {%for idea in ideas %}
+                {% if idea.content != None %}
+            <div class="big-div">  
+                <div>
+                    <p><a href="/users/{{idea.user_id}}" class="user-alias-post"><strong>{{idea.alias}}</strong> </a> says: {{idea.content}}</p>
+                </div><br>
+                <div>
+                    {% if idea.user_id == user.id%}            
+                        <a href="/bright_ideas/delete/{{idea['ideas.id']}}" class="delete-post">
+                            <img src="{{url_for('static',filename='img/delete.png')}}" width="30px" alt="delete my post" title="DELETE POST">
+                        </a>
+                    {% endif%}
+                </div>
+                <div class="heart">
+                    <a href="/bright_ideas/like/{{idea['ideas.id']}}" class="like">
+                        <img src="{{url_for('static', filename='img/heart.png')}}" width="28px" alt="Like post">
+                    </a>
+                    <a href="/bright_ideas/{{idea['ideas.id']}}" class="people-like-this">
+                        
+                    {% for index in range(likes | length) %}
+                            {% if likes[index][0] ==  idea['ideas.id'] %}
+                                
+                                {{likes[index][1]}}
+                            {% endif %}
+                    {% endfor %}    
+                        people like this</a>
+                    
+                </div>
+               
+            </div>
+            {% endif %}
+            <br>
+            
+            
+        </div>
+            {%endfor%}
+    </div>
+
+
+        
+</body>
+</html>

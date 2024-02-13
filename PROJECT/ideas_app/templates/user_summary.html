@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User's page</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/user_page.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela%20Round&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <a href="/bright_ideas">
+                <img src="{{url_for('static',filename='img/logo.png')}}" width="130px"> 
+            </a>
+            <form action="/logout" method="post">
+                <input type="submit" class="button-29 logout-btn" value="Logout">
+            </form>  
+        </nav>
+    </div><br>
+    <div class="detalles-usuario"><br>
+            {% for u in usu%}
+                {% if u.id == id %}
+                <div class="datos-usuario">
+                    <p>
+                        Name:
+                        <a href="/bright_ideas/{{id}}">{{u.name}}</a></p>
+                    <p>Alias:<a href="/bright_ideas/{{id}}">{{u.alias}}</a></p>
+                    <p>Email:<a href="#">{{u.email}}</a></p>
+                </div>
+                {%endif%}
+            {%endfor%}
+    </div>
+   
+    <div class="total">
+        <p>Total number of posts <b>{{total}} </b>   |  Total number of likes <b>{{cantLikes}}</strong></b>
+        
+    </div>
+    
+</body>
+</html>

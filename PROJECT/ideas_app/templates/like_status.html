@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Status</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/user_page.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela%20Round&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav">
+        <nav>
+            <a href="/bright_ideas">
+                <img src="{{url_for('static',filename='img/logo.png')}}" width="120px">
+            </a> 
+            <form action="/logout" method="post">
+                <input type="submit" class="button-29 logout-btn" value="LOGOUT">
+
+            </form>  
+        </nav>
+    </div><br>
+
+    <div>
+        <div> 
+            {% for idea in ideas%}
+                {%if idea['ideas.id'] == id %}
+                <h2>
+                    <a href="/users/{{idea.user_id}}" id="usr_name_likes">{{idea.name}}</a>
+                    says <i> {{idea.content}} </i>
+                </h2>
+                {%endif%}
+                {% endfor %}
+        </div><br>
+        <div>
+            <h3 class="people-like"> <span class="hrt-emoji">&#128147</span> People who liked the post</h3>
+            <table>
+                <thead>
+                    <th>Alias</th>
+                    <th>Name</th>
+                </thead>
+                {% for a in alias %}
+                <tbody>
+                       <td><a href="/users/{{a.id}}">{{a.alias}}</a></td>
+                       <td>{{a.name}}</td>
+                </tbody>
+                {%endfor%}
+            </table>
+            
+        </div>
+    </div>
+</body>
+</html>
